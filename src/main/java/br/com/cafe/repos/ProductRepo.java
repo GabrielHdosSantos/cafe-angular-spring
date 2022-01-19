@@ -1,14 +1,14 @@
 package br.com.cafe.repos;
 
-import br.com.cafe.model.Customer;
+import br.com.cafe.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 @Repository
-public interface CustomerRepo extends JpaRepository<Customer, Long> {
+public interface ProductRepo extends JpaRepository<Product, Long> {
 
-    Customer findCustomerByCpf(String cpf);
+    Product findProductById(Long id);
 
 }
