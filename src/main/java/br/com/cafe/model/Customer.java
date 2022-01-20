@@ -25,6 +25,8 @@ public class Customer implements Serializable {
     @JsonIgnore
     private List<Order> orders;
 
+
+
     public Customer(String name, String cpf, List<Order> orders) {
         this.name = name;
         this.cpf = cpf;

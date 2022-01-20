@@ -19,19 +19,20 @@ public class OrderController {
     private OrderService orderService;
 
     @PostMapping("{id}")
-    public ResponseEntity<Order> doOrder(@RequestBody CustomerDTO dto, @PathVariable("id") Long id){
+    public ResponseEntity<Order> doOrder(@RequestBody CustomerDTO dto, @PathVariable("id") Long id) {
         Order order = orderService.addOrder(dto, id);
 
         return new ResponseEntity<>(order, HttpStatus.CREATED);
     }
 
     @DeleteMapping("{id}")
-    public void deleteOrder(@PathVariable("id") Long id){
+    public void deleteOrder(@PathVariable("id") Long id) {
+
         orderService.deleteOrder(id);
     }
 
     @GetMapping
-    public ResponseEntity<List<Order>> ordersPedido (){
+    public ResponseEntity<List<Order>> ordersPedido() {
         List<Order> orders = orderService.orderPedido();
         return new ResponseEntity<>(orders, HttpStatus.OK);
     }
