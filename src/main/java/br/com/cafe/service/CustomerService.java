@@ -52,7 +52,7 @@ public class CustomerService {
         List<CustomerOrderDTO> result = new ArrayList<>();
 
         for (Tuple customer : customers) {
-            CustomerOrderDTO customerOrderDTO = new CustomerOrderDTO(customer.get(0), customer.get(1), customer.get(2), customer.get(0));
+            CustomerOrderDTO customerOrderDTO = new CustomerOrderDTO(customer.get(1), customer.get(2), customer.get(3), customer.get(0));
             result.add(customerOrderDTO);
         }
 
